@@ -16,12 +16,9 @@ export const Cart = () => {
     <div className="grid lg:grid-cols-3">
       <div className="grid-item col-span-2">
         <div className=" p-5 flex justify-center flex-col shadow lg:px-24 md:p-24 gap-4 ">
-          {cartItem.map((item) => (
-            <div
-              key={item.id}
-              className="flex justify-center shadow rounded-lg"
-            >
-              <CartCard key={item.id} item={item} remove={handleRemoveCart} />
+          {cartItem.map((item, index) => (
+            <div key={index} className="flex justify-center shadow rounded-lg">
+              <CartCard key={index} item={item} remove={handleRemoveCart} />
             </div>
           ))}
         </div>

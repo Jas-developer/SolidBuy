@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cart::before {
+  content: attr(data-count);
+  position: absolute;
+  top: -0.75em;
+  background-color: red;
+  right: -0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  color: aliceblue;
+}
